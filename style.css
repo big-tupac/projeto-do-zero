@@ -1,0 +1,218 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.logo-mario{
+    height: 100px;
+}
+
+button{
+    color: white;
+    background-color: #c51111;
+    border-radius: 3px;
+    border: none;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+
+
+
+.imagem-mario-luigi{
+    height: 500px;
+}
+
+body{
+    height: 100vh;
+     
+}
+
+
+.caixa-mae{
+    display: flex;
+    justify-content: flex-start;
+    height: 100vh;
+    align-items: center;
+    padding: 100px;
+
+}
+.caixa-principal{
+
+    width: 40%;
+    color: white;
+}
+
+.caixa-video{
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+
+video{
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+
+}
+
+.mascara {
+
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    position: fixed;
+    top: 0;
+}
+
+.link-whatsapp img {
+    height: 60px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 30px;
+}
+
+.header img {
+    height: 60px;
+}
+
+.header a{
+    color:white;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header a:hover{
+     color:#c51111;
+     font-size: 26px;
+     transition: 0.5s ease-in-out;
+}
+
+.formulario-falar-conosco {
+    background-color: white;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    position: fixed;
+    left: -300px;
+    top: 30%;
+    padding: 20px;
+    border-radius: 5px;
+    transition: left 1s ease-in-out;
+}
+
+input {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left:  5px;
+    outline-color: #18d80f;
+}
+
+textarea{
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left:  5px;
+    outline-color: #18d80f;
+    height: 100px;
+    width: 270px;
+}
+
+.botão-Orçamento{
+    background-color: blue;
+}
+
+
+.mascara-formulario{
+    visibility: hidden;
+    position: fixed;
+    top: 0px;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7)  50%, rgba(10, 12, 16, 0.99) 85%);*/
+    transition: visibility 1s ease-in-out;
+
+}
+/*
+    inicial
+        top:30%;
+        left; -300px;
+
+    final
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+*/
+
+/* media query: serve para ajustar 
+o site para as configuração de celulares.
+
+As tags:
+    -max: valor menor que Npx, aplica o css do MEDIA.
+    -min: valor maior que Npx, aplica o css do MEDIA.
+
+*/
+
+
+@media(max-width:1100px) { /* deixa o site responsivel, cria ponto das configurações,
+                              para alterar em telas menores.*/
+    p{
+        display: none;/* retirar os paragrafos*/
+    }
+
+
+    .caixa-mae{
+        flex-direction: column;/*deixa os itens em cima do outro*/
+        padding: 10px;
+    }
+
+    .caixa-principal{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .imagem-mario-luigi{
+        width: 80vw; /* a imagem (largura) vai ocupar 80% da tela*/
+        height: auto;/* a imagem (altura), auto - alterar autimaticamente*/
+    }
+
+    .header{
+        margin: 10px;/* altera a margem dos links*/
+        display: flex;
+        align-items: center;
+        justify-content:center;
+
+
+    }
+
+    .header img {
+
+        display: none;/* sumir com a imagem*/
+    
+    
+    }
+    
+    .header a { 
+        font-size: 20px;/* a fonte dos menus (links) altera o tamanho. 
+
+    }
+
+}
